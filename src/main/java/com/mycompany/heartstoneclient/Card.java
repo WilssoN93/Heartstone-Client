@@ -25,7 +25,52 @@ public class Card {
     private String health;
     private boolean collectible;
     private String attack;
+    private String durability;
+    private String elite;
+
+    public String getElite() {
+        return elite;
+    }
+
+    public void setElite(String elite) {
+        this.elite = elite;
+    }
+
+    public String getDurability() {
+        return durability;
+    }
+
+    public void setDurability(String durability) {
+        this.durability = durability;
+    }
+
+    public String getHowToGetGold() {
+        return howToGetGold;
+    }
+
+    public void setHowToGetGold(String howToGetGold) {
+        this.howToGetGold = howToGetGold;
+    }
     private String race;
+    private String artist;
+    private String howToGet;
+    private String howToGetGold;
+
+    public String getHowToGet() {
+        return howToGet;
+    }
+
+    public void setHowToGet(String howToGet) {
+        this.howToGet = howToGet;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
 
     public String getRace() {
         return race;
