@@ -6,12 +6,10 @@ import com.mashape.unirest.http.ObjectMapper;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import java.io.IOException;
-import java.util.List;
 
 public class HttpConnect {
 
     private HttpResponse<Expansions> cardResponse;
-    private HttpResponse<Standard> response;
     
 
     public HttpConnect() {
@@ -54,58 +52,6 @@ public class HttpConnect {
             }
 
         });
-    }
-
-    public List<String> getClassList() throws UnirestException {
-
-        return response.getBody().getClasses();
-
-    }
-
-    public String getPatch() throws UnirestException {
-
-        return response.getBody().getPatch();
-
-    }
-
-    public List<String> getFactions() {
-
-        return response.getBody().getFactions();
-    }
-
-    public List<String> getSets() {
-
-        return response.getBody().getSets();
-    }
-
-    public List<String> getLocales() {
-
-        return response.getBody().getLocales();
-    }
-
-    public List<String> getQualities() {
-
-        return response.getBody().getQualities();
-    }
-
-    public List<String> getRaces() {
-
-        return response.getBody().getRaces();
-    }
-
-    public List<String> getTypes() {
-
-        return response.getBody().getTypes();
-    }
-
-    public List<String> getWild() {
-
-        return response.getBody().getWild();
-    }
-
-    public List<String> getStandard() {
-
-        return response.getBody().getStandard();
     }
     
     public Expansions javaObject(){
