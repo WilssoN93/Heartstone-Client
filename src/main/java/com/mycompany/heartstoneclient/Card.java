@@ -1,15 +1,12 @@
-
-
 package com.mycompany.heartstoneclient;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.net.URL;
 import java.util.List;
 
-
 @JsonIgnoreProperties
 public class Card {
-    
+
     private String cardId;
     private String dbfId;
     private String name;
@@ -20,13 +17,47 @@ public class Card {
     private String playerClass;
     private String flavor;
     private String faction;
-    List<Mechanics> mechanics;
+    private List<Mechanics> mechanics;
     private String rarity;
     private String health;
     private boolean collectible;
     private String attack;
     private String durability;
     private String elite;
+    private String multiClassGroup;
+    private int armor;
+    private String race;
+    private String artist;
+    private String howToGet;
+    private String howToGetGold;
+    private List<HearthstoneClass> classes;
+    private URL img;
+    private URL imgGold;
+    private String locale;
+
+    public int getArmor() {
+        return armor;
+    }
+
+    public void setArmor(int armor) {
+        this.armor = armor;
+    }
+
+    public String getMultiClassGroup() {
+        return multiClassGroup;
+    }
+
+    public void setMultiClassGroup(String multiClassGroup) {
+        this.multiClassGroup = multiClassGroup;
+    }
+
+    public List<HearthstoneClass> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<HearthstoneClass> classes) {
+        this.classes = classes;
+    }
 
     public String getElite() {
         return elite;
@@ -51,10 +82,6 @@ public class Card {
     public void setHowToGetGold(String howToGetGold) {
         this.howToGetGold = howToGetGold;
     }
-    private String race;
-    private String artist;
-    private String howToGet;
-    private String howToGetGold;
 
     public String getHowToGet() {
         return howToGet;
@@ -120,8 +147,6 @@ public class Card {
         this.mechanics = mechanics;
     }
 
- 
-
     public String getFlavor() {
         return flavor;
     }
@@ -137,10 +162,6 @@ public class Card {
     public void setFaction(String faction) {
         this.faction = faction;
     }
-    
-    private URL img;
-    private URL imgGold;
-    private String locale;
 
     public String getCardId() {
         return cardId;
@@ -228,5 +249,11 @@ public class Card {
 
     public void setLocale(String locale) {
         this.locale = locale;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Card ID: " + cardId;
+
     }
 }

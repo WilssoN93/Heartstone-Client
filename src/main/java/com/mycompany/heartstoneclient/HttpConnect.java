@@ -10,8 +10,8 @@ import java.util.List;
 
 public class HttpConnect {
 
-    HttpResponse<Expansions> cardResponse;
-    HttpResponse<Standard> response;
+    private HttpResponse<Expansions> cardResponse;
+    private HttpResponse<Standard> response;
     
 
     public HttpConnect() {
