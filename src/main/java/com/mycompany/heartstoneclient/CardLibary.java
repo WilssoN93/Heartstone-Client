@@ -7,25 +7,10 @@ public class CardLibary {
     public static void main(String[] args) throws UnirestException {
 
         HttpConnect o = new HttpConnect();
-        
-//        for (Card card : o.javaObject().getallCards()) {
-//            if (card.getFlavor() != null) {
-//                System.out.println("");
-//                System.out.println(card.getFlavor());
-//            }
-//        }
-        System.out.println(o.javaObject().getallCards().size());
+        o.javaObject().setCardList();
+        System.out.println(o.javaObject().getAllCards().size());
         o.javaObject().removeDublicates();
-//        for (Card card : o.javaObject().getallCards()) {
-//            if (card.getFlavor() != null) {
-//                
-//                System.out.println("");
-//                System.out.println(card.getFlavor());
-//            }
-//
-//        }
-        
-        System.out.println(o.javaObject().getallCards().size());
+        System.out.println(o.javaObject().getAllCards().size());
     }
 
 }

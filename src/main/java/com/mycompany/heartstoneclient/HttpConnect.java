@@ -9,13 +9,13 @@ import java.io.IOException;
 
 public class HttpConnect {
 
-    private HttpResponse<Expansions> cardResponse;
+    private HttpResponse<Expansions> response;
     
 
     public HttpConnect() {
         try {
             init();
-            cardResponse = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards")
+            response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards")
                     .header("X-RapidAPI-Key", "45474e64e1msha4b981763fe047cp1e6056jsn58b4dbc3f38f").asObject(Expansions.class);
         } catch (UnirestException e) {
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class HttpConnect {
     
     public Expansions javaObject(){
     
-        return cardResponse.getBody();
+        return response.getBody();
         
     }
 
