@@ -1,5 +1,5 @@
 
-package com.mycompany.heartstoneclient;
+package com.mycompany.heartstoneclient.entitys;
 
 
 public class HearthstoneClass {

@@ -1,5 +1,6 @@
 package com.mycompany.heartstoneclient;
 
+import com.mycompany.heartstoneclient.entitys.Expansions;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.ObjectMapper;

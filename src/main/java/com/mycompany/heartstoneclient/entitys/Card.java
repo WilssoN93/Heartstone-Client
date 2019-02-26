@@ -1,7 +1,6 @@
-package com.mycompany.heartstoneclient;
+package com.mycompany.heartstoneclient.entitys;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.net.URL;
 import java.util.List;
 
 @JsonIgnoreProperties
@@ -31,8 +30,8 @@ public class Card {
     private String howToGet;
     private String howToGetGold;
     private List<HearthstoneClass> classes;
-    private URL img;
-    private URL imgGold;
+    private String img;
+    private String imgGold;
     private String locale;
 
     public int getArmor() {
@@ -227,19 +226,19 @@ public class Card {
         this.playerClass = playerClass;
     }
 
-    public URL getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(URL img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
-    public URL getImgGold() {
+    public String getImgGold() {
         return imgGold;
     }
 
-    public void setImgGold(URL imgGold) {
+    public void setImgGold(String imgGold) {
         this.imgGold = imgGold;
     }
 

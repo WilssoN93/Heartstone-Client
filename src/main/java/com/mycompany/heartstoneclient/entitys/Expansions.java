@@ -1,10 +1,14 @@
-package com.mycompany.heartstoneclient;
+package com.mycompany.heartstoneclient.entitys;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Expansions {
+    
+    public Expansions(){
+    
+    }
 
     private List<Card> allCards;
 
@@ -59,7 +63,7 @@ public class Expansions {
     @JsonProperty("Debug")
     private List<Card> debug;
 
-    public void setCardList() {
+    public final void setCardList() {
         allCards = new ArrayList();
         allCards.addAll(basic);
         allCards.addAll(classic);
@@ -86,7 +90,7 @@ public class Expansions {
         allCards.addAll(credits);
         allCards.addAll(debug);
 
-        
+        removeDublicates();
     }
 
     public void removeDublicates() {
